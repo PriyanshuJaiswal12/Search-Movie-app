@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+nav {
+    background-color: rgb(3, 20, 43);
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.right input,
+button {
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.right input {
+    border-radius: 3px 0 0 3px;
+}
+
+.right button {
+    background-color: rgba(241, 218, 41, 0.902);
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    /*button ka color thoda time leke change ho */
+}
+
+.right button:hover {
+    background: #ffdd45;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block: 38px;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.movie-poster img {
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 5px 0 0 5px;
+}
+
+.movie-info {
+    padding-inline: 15px;
+}
+
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+
+.movie-info h2+p {
+    /*  + operator batata hai p h2 tag ka sibling hai */
+    text-align: center;
+}
+
+.movie-info .movieGenre {
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow-x: auto;
+}
+
+.movie-info .movieGenre p {
+    background: #232f3e;
+    color: #fff;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.movie-info p {
+    font-size: 18px;
+    margin-block: 16px;
+    /* equal to top and bottom margin*/
+    line-height: 24px;
+    /*for space betwwen lines*/
+}
+
+.container.noBackground {
+    background: none;
+    box-shadow: none;
+    align-items: center;
+}
+
+.container .error-img {
+    height: 70vh;
+}
+
+footer {
+    background-color: rgb(3, 20, 43);
+    text-align: center;
+    color: white;
+    padding-block: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+
+/* Responsive code for mobile device also */
+@media screen and (max-width:950px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+
+    .movie-info {
+        padding-inline: 30px;
+        /* equal to left and right padding*/
+    }
+}
+
+@media screen and (max-width:630px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right {
+        margin-top: 12px;
+    }
+}
